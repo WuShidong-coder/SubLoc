@@ -1,0 +1,43 @@
+
+#seed: 2024
+#num_epochs: 130
+#batch_size: 340
+#log_iterations: 200
+#patience: 60
+#min_train_acc: 99.6
+#optimizer_parameters:
+  #lr: 5.0e-5
+experiment_name: '10_samples_test'
+
+seed: 2024
+num_epochs: 5        
+batch_size: 2        
+log_iterations: 1    
+patience: 3          
+min_train_acc: 90.0  
+
+optimizer_parameters:
+  lr: 1.0e-4    
+# Paths to Data
+train_embeddings: 'data_files/embeddings/deeploc_train_embeddings.h5'
+val_embeddings: 'data_files/embeddings/deeploc_set_embeddings.h5'
+test_embeddings: 'data_files/embeddings/deeploc_test_embeddings.h5'
+#train_embeddings: 'data_files/embeddings/deeploc_our_train_set_token_embeddings.h5'
+#val_embeddings: 'data_files/embeddings/deeploc_our_val_set_token_embeddings.h5'
+#test_embeddings: 'data_files/deeploc_test_set_token_embeddings.h5'
+
+train_remapping: 'data_files/deeploc_train.fasta'
+val_remapping: 'data_files/deeploc_set.fasta'
+test_remapping: 'data_files/deeploc_test.fasta'
+#key_format: fasta_descriptor
+key_format: hash
+
+# continue to train
+#checkpoint: 'runs/SubLoc02_07'
+
+# Model parameters
+model_type: 'SubLoc02'
+model_parameters:
+  dropout: 0.1
+#  kernel_size: 9
+  output_dim: 10

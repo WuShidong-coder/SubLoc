@@ -1,0 +1,32 @@
+experiment_name: '04'
+
+seed: 2024
+num_epochs: 200
+batch_size: 512
+log_iterations: 100
+patience: 60
+min_train_acc: 99.6
+optimizer_parameters:
+  lr: 5.0e-5
+
+# Paths to Data
+#train_embeddings: 'data_files/deeploc_our_train_embeddings.h5'
+#val_embeddings: 'data_files/deeploc_our_val_embeddings.h5'
+#test_embeddings: 'data_files/deeploc_test_embeddings.h5'
+train_embeddings: 'data_files/deeploc_our_train_set.h5'
+val_embeddings: 'data_files/deeploc_our_val_set.h5'
+test_embeddings: 'data_files/deeploc_test_set.h5'
+
+train_remapping: 'data_files/1000length/deeploc_our_train_set.fasta'
+val_remapping: 'data_files/1000length/deeploc_our_val_set.fasta'
+test_remapping: 'data_files/1000length/deeploc_test_set.fasta'
+key_format: fasta_descriptor
+#key_format: hash
+
+
+# Model parameters
+model_type: 'LightAttention'
+model_parameters:
+  dropout: 0.25
+  kernel_size: 9
+  output_dim: 10
