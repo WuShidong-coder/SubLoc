@@ -1,0 +1,23 @@
+name: bio1
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - biopython
+  - h5py
+  - hdf5
+  - matplotlib
+  - python=3.9
+  - pytorch
+  - seaborn
+  - torchaudio
+  - torchvision
+  - tqdm
+  - pip:
+    - numpy
+    - opt-einsum
+    - pickleshare
+    - pyaml
+    - pyyaml
+    - scikit-learn
+    - scipy
